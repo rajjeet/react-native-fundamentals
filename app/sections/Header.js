@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     headStyle: {
         paddingTop: 30,
         paddingRight: 10,
-        backgroundColor: Platform.OS === 'android' ? '#31e981' : '#35605a',
+        backgroundColor: Platform.OS !== 'android' ? '#31e981' : '#35605a',
         flex: 1,
         flexDirection: 'row',
         borderBottomWidth: 2,
