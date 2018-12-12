@@ -13,7 +13,7 @@ const AppNavigator = createStackNavigator(
         }
     },
     {
-        initialRouteName: 'HomeRoute'
+        initialRouteName: 'ContactRoute'
     }
 );
 

@@ -28,7 +28,7 @@ export class Menu extends React.Component{
                         <Text style={styles.buttonText}>CONTACT</Text>
                     </TouchableOpacity>
                 </View>
- 
+
                 <View style={styles.buttonRow}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
                         <Text style={styles.buttonText}>QUIZ</Text>
