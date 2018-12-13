@@ -1,6 +1,7 @@
 import React from 'react';
 import {Home} from "./app/views/Home";
 import {Contact} from "./app/views/Contact";
+import {Video} from "./app/views/Video";
 import {createAppContainer, createStackNavigator} from "react-navigation";
 
 const AppNavigator = createStackNavigator(
@@ -10,10 +11,13 @@ const AppNavigator = createStackNavigator(
         },
         ContactRoute: {
             screen: Contact
+        },
+        LessonsRoute: {
+            screen: Video
         }
     },
     {
-        initialRouteName: 'ContactRoute'
+        initialRouteName: 'HomeRoute'
     }
 );
 
