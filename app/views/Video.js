@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, FlatList, Image, TouchableWithoutFeedback} from 'react-native';
 
-export class Video extends React.Component {
+class Video extends React.Component {
     static navigationOptions = {
         header: null
     };
@@ -24,6 +24,7 @@ export class Video extends React.Component {
     }
 
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View>
                 {this.state.listLoaded && (
@@ -31,6 +32,7 @@ export class Video extends React.Component {
                         <FlatList data={this.state.videoList}
                                   renderItem={({item}) =>
                                       <TubeItem
+                                          navigate={navigate}
                                           id={item.id.videoId}
                                           title={item.snippet.title}
                                           imageSrc={item.snippet.thumbnails.high.url}
@@ -55,7 +57,7 @@ export class Video extends React.Component {
 export class TubeItem extends React.Component {
 
     onPress = () => {
-        console.log(this.props.id);
+        this.props.navigate('VideoDetailRoute', {ytubeId: this.props.id})
     };
 
 
@@ -75,3 +77,5 @@ export class TubeItem extends React.Component {
         )
     }
 }
+
+export default Video;
