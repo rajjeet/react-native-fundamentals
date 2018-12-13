@@ -12,10 +12,10 @@ export class Menu extends React.Component{
             <View style={styles.container}>
 
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('LessonsRoute')}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigation.navigate('LessonsRoute')}>
                         <Text style={styles.buttonText}>LESSONS</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('RegisterRoute')}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigation.navigate('RegisterRoute')}>
                         <Text style={styles.buttonText}>REGISTER</Text>
                     </TouchableOpacity>
                 </View>
@@ -24,7 +24,7 @@ export class Menu extends React.Component{
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
                         <Text style={styles.buttonText}>BLOG</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('ContactRoute')}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigation.navigate('ContactRoute')}>
                         <Text style={styles.buttonText}>CONTACT</Text>
                     </TouchableOpacity>
                 </View>

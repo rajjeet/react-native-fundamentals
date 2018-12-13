@@ -28,7 +28,7 @@ export class Contact extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header message='Press to Login'/>
+                <Header navigation={this.props.navigation} message='Press to Login'/>
                 <Text style={styles.heading}>Contact Us</Text>
 
                 <TextInput
