@@ -6,6 +6,8 @@ import Video from "./app/views/Video";
 import VideoDetail from './app/views/VideoDetail';
 import Register from "./app/views/Register";
 import Login from "./app/views/Login";
+import Quiz from "./app/sections/Quiz";
+import QuizFinish from "./app/views/QuizFinish";
 
 const AppNavigator = createStackNavigator(
     {
@@ -26,6 +28,12 @@ const AppNavigator = createStackNavigator(
         },
         LoginRoute: {
             screen: Login
+        },
+        QuizRoute: {
+            screen: Quiz
+        },
+        FinishRoute: {
+            screen: QuizFinish
         }
     },
     {

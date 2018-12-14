@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert, StyleSheet, AsyncStorage, View, Text, TextInput, TouchableHighlight} from 'react-native';
+import {StyleSheet, View, Text, TouchableHighlight} from 'react-native';
 
 
 class Question extends React.Component {
@@ -22,7 +22,7 @@ class Question extends React.Component {
                 selected: true,
                 correct: true
             });
-            this.props.updateScore(0);
+            this.props.scoreUpdate(0);
         } else {
             this.setState({
                 selected: true
@@ -57,7 +57,7 @@ class Question extends React.Component {
 
                     </View>
                 )}
-                {!this.state.selected && this.state.correct && (
+                {this.state.selected && this.state.correct && (
                     <View style={styles.correctContainer}>
                         <Text style={styles.questionText}>{this.props.question}</Text>
                         <Text style={styles.answerText}>{this.props.answer1}</Text>
@@ -67,8 +67,9 @@ class Question extends React.Component {
                         <Text style={styles.answerText}>CORRECT</Text>
                     </View>
                 )}
-                {!this.state.selected && !this.state.correct && (
-                    <View style={styles.correctContainer}>
+
+                {this.state.selected && !this.state.correct && (
+                    <View style={styles.wrongContainer}>
                         <Text style={styles.questionText}>{this.props.question}</Text>
                         <Text style={styles.answerText}>{this.props.answer1}</Text>
                         <Text style={styles.answerText}>{this.props.answer2}</Text>
