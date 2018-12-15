@@ -23,7 +23,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.phullr2.sampleapp"
+    },
+    "android": {
+      "package": "com.phullr2.sampleapp"
     }
+
   }
 }
