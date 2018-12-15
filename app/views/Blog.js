@@ -26,7 +26,7 @@ class Blog extends React.Component {
     }
 
     chooseBlog = (blogID) => {
-        console.log(`Blog ID chosen: ${blogID}`);
+        this.props.navigation.navigate('BlogDetailRoute', {blogId: blogID});
     };
 
     render() {

@@ -9,6 +9,7 @@ import Login from "./app/views/Login";
 import Quiz from "./app/sections/Quiz";
 import QuizFinish from "./app/views/QuizFinish";
 import Blog from "./app/views/Blog";
+import BlogDetail from "./app/views/BlogDetail";
 
 const AppNavigator = createStackNavigator(
     {
@@ -38,6 +39,9 @@ const AppNavigator = createStackNavigator(
         },
         BlogRoute: {
             screen: Blog
+        },
+        BlogDetailRoute: {
+            screen: BlogDetail
         }
 
     },
