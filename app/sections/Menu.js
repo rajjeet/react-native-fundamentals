@@ -33,7 +33,7 @@ export class Menu extends React.Component{
                     <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigation.navigate('QuizRoute')}>
                         <Text style={styles.buttonText}>QUIZ</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigation.navigate('AboutRoute')}>
                         <Text style={styles.buttonText}>ABOUT</Text>
                     </TouchableOpacity>
                 </View>
